@@ -1,0 +1,1429 @@
+/* ================================= */
+/* BASIC RESET */
+/* ================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================================= */
+/* HTML */
+/* ================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ================================= */
+/* BODY */
+/* ================================= */
+
+body {
+
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+
+    color: #4d3040;
+
+    overflow-x: hidden;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd6e7,
+            #dff7ff,
+            #fff1c9,
+            #eadcff,
+            #d9fff2
+        );
+
+    background-size: 400% 400%;
+
+    animation:
+        backgroundChange
+        15s
+        ease
+        infinite;
+}
+
+
+/* ================================= */
+/* ANIMATED BACKGROUND */
+/* ================================= */
+
+@keyframes backgroundChange {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    25% {
+        background-position: 100% 50%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    75% {
+        background-position: 0% 100%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+/* ================================= */
+/* SCREEN */
+/* ================================= */
+
+.screen {
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    display: none;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    animation:
+        screenEnter
+        0.8s
+        ease;
+}
+
+
+.screen.active {
+
+    display: flex;
+
+}
+
+
+/* ================================= */
+/* TEXT */
+/* ================================= */
+
+.tiny-title {
+
+    font-size: 13px;
+
+    letter-spacing: 5px;
+
+    color: #c44569;
+
+    font-weight: bold;
+
+    margin-bottom: 18px;
+
+}
+
+
+h1 {
+
+    font-size: 58px;
+
+    color: #c44569;
+
+    margin-bottom: 15px;
+
+}
+
+
+h2 {
+
+    font-size: 28px;
+
+    color: #74445b;
+
+    margin-bottom: 20px;
+
+}
+
+
+.description {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    max-width: 600px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.hint {
+
+    margin-top: 20px;
+
+    color: #777;
+
+    font-style: italic;
+
+}
+
+
+/* ================================= */
+/* EMOJIS */
+/* ================================= */
+
+.rakhi {
+
+    font-size: 100px;
+
+    margin-bottom: 15px;
+
+    animation:
+        floating
+        2s
+        infinite
+        ease-in-out;
+
+}
+
+
+.final-rakhi {
+
+    font-size: 90px;
+
+    animation:
+        floating
+        2s
+        infinite
+        ease-in-out;
+
+}
+
+
+.sparkles {
+
+    font-size: 35px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.big-emoji {
+
+    font-size: 90px;
+
+    margin-bottom: 20px;
+
+    animation:
+        floating
+        2s
+        infinite
+        ease-in-out;
+
+}
+
+
+/* ================================= */
+/* BUTTONS */
+/* ================================= */
+
+button {
+
+    border: none;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition:
+        all
+        0.3s
+        ease;
+}
+
+
+/* ================================= */
+/* MAIN BUTTON */
+/* ================================= */
+
+.main-button {
+
+    padding:
+        17px
+        35px;
+
+    border-radius: 50px;
+
+    background: #d94f70;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 10px 25px
+        rgba(
+            217,
+            79,
+            112,
+            0.3
+        );
+}
+
+
+.main-button:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.05);
+
+    background: #b9385a;
+
+}
+
+
+/* ================================= */
+/* DANGER BUTTON */
+/* ================================= */
+
+.danger-button {
+
+    padding:
+        18px
+        40px;
+
+    border-radius: 50px;
+
+    background: #ff6b81;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    animation:
+        shake
+        1.5s
+        infinite;
+}
+
+
+.danger-button:hover {
+
+    transform: scale(1.1);
+
+}
+
+
+/* ================================= */
+/* NEXT BUTTON */
+/* ================================= */
+
+.next-button {
+
+    margin-top: 30px;
+
+    padding:
+        15px
+        30px;
+
+    border-radius: 50px;
+
+    background: #7c5cff;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 10px 25px
+        rgba(
+            124,
+            92,
+            255,
+            0.25
+        );
+}
+
+
+.next-button:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.05);
+
+}
+
+
+/* ================================= */
+/* GIFT BOXES */
+/* ================================= */
+
+.gift-container {
+
+    display: flex;
+
+    gap: 30px;
+
+    margin: 35px 0;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.gift {
+
+    width: 120px;
+
+    height: 120px;
+
+    border-radius: 25px;
+
+    background: white;
+
+    font-size: 58px;
+
+    box-shadow:
+        0 12px 30px
+        rgba(
+            0,
+            0,
+            0,
+            0.12
+        );
+}
+
+
+.gift:hover {
+
+    transform:
+        translateY(-15px)
+        rotate(5deg)
+        scale(1.1);
+
+}
+
+
+.gift-opened {
+
+    animation:
+        giftOpen
+        0.6s
+        ease;
+
+}
+
+
+/* ================================= */
+/* GIFT RESULT */
+/* ================================= */
+
+#giftResult {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    min-height: 80px;
+
+    margin-top: 10px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #c44569;
+
+}
+
+
+/* ================================= */
+/* GIFT SURPRISE CARD */
+/* ================================= */
+
+.surprise-message {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.90
+        );
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(
+            0,
+            0,
+            0,
+            0.12
+        );
+
+    animation:
+        photoReveal
+        0.6s
+        ease;
+
+}
+
+
+.surprise-message h2 {
+
+    color: #d94f70;
+
+    margin:
+        15px 0
+        10px;
+
+}
+
+
+.surprise-message p {
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+}
+
+
+/* ================================= */
+/* GIFT PHOTO */
+/* ================================= */
+
+.gift-photo {
+
+    width: 300px;
+
+    max-width: 100%;
+
+    height: 350px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 0 auto;
+
+    border-radius: 15px;
+
+    background: white;
+
+    box-shadow:
+        0 10px 30px
+        rgba(
+            0,
+            0,
+            0,
+            0.18
+        );
+
+    animation:
+        photoReveal
+        0.7s
+        ease;
+
+}
+
+
+/* ================================= */
+/* PHOTO MEMORY */
+/* ================================= */
+
+#memoryCard {
+
+    margin-top: 20px;
+
+    animation:
+        photoReveal
+        1s
+        ease;
+
+}
+
+
+.photo-frame {
+
+    width: 380px;
+
+    height: 430px;
+
+    background: white;
+
+    padding: 12px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(
+            0,
+            0,
+            0,
+            0.2
+        );
+
+}
+
+
+.photo-frame img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 5px;
+
+    display: block;
+
+}
+
+
+#photoTitle {
+
+    margin-top: 20px;
+
+}
+
+
+#photoCaption {
+
+    font-size: 17px;
+
+}
+
+
+.photo-counter {
+
+    margin:
+        12px 0;
+
+    color: #c44569;
+
+    font-weight: bold;
+
+}
+
+
+/* ================================= */
+/* VIDEO CONTAINER */
+/* ================================= */
+
+.video-container {
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 25px auto;
+
+    text-align: center;
+
+}
+
+
+.video-container h2 {
+
+    margin-bottom: 15px;
+
+}
+
+
+.video-container video {
+
+    width: 100%;
+
+    max-height: 550px;
+
+    border-radius: 25px;
+
+    display: block;
+
+    margin: auto;
+
+    object-fit: contain;
+
+    background: black;
+
+    box-shadow:
+        0 15px 40px
+        rgba(
+            0,
+            0,
+            0,
+            0.20
+        );
+
+}
+
+
+.video-message {
+
+    margin:
+        25px 0
+        15px;
+
+    font-size: 20px;
+
+    line-height: 1.6;
+
+}
+
+
+#nextVideoButton {
+
+    margin:
+        20px auto
+        30px;
+
+    display: block;
+
+}
+
+
+#questionNext {
+
+    margin:
+        30px auto;
+
+}
+
+
+/* ================================= */
+/* QUESTION */
+/* ================================= */
+
+.answer-container {
+
+    width: 750px;
+
+    max-width: 90vw;
+
+    min-height: 350px;
+
+    position: relative;
+
+    margin-top: 25px;
+
+    display: block;
+
+}
+
+
+/* ================================= */
+/* ANSWER BUTTONS */
+/* ================================= */
+
+.answer-container button {
+
+    padding:
+        15px
+        25px;
+
+    border-radius: 40px;
+
+    background: white;
+
+    color: #c44569;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 8px 20px
+        rgba(
+            0,
+            0,
+            0,
+            0.12
+        );
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        left 0.25s ease,
+        top 0.25s ease,
+        right 0.25s ease,
+        bottom 0.25s ease,
+        transform 0.2s ease,
+        background 0.2s ease;
+
+}
+
+
+/* ================================= */
+/* WRONG OPTION 1 */
+/* ================================= */
+
+.moving-answer:nth-child(1) {
+
+    position: absolute;
+
+    left: 30px;
+
+    top: 30px;
+
+}
+
+
+/* ================================= */
+/* WRONG OPTION 2 */
+/* ================================= */
+
+.moving-answer:nth-child(2) {
+
+    position: absolute;
+
+    right: 30px;
+
+    top: 30px;
+
+}
+
+
+/* ================================= */
+/* WRONG OPTION 3 */
+/* ================================= */
+
+.moving-answer:nth-child(3) {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 25px;
+
+    transform:
+        translateX(-50%);
+
+}
+
+
+/* ================================= */
+/* CORRECT ANSWER */
+/* ================================= */
+
+.correct-answer {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(
+            -50%,
+            -50%
+        );
+
+    z-index: 10;
+
+}
+
+
+/* ================================= */
+/* ANSWER HOVER */
+/* ================================= */
+
+.answer-container button:hover {
+
+    background: #ffe2ea;
+
+}
+
+
+/* ================================= */
+/* WRONG BUTTON HOVER */
+/* ================================= */
+
+.moving-answer:hover {
+
+    background: #ffe2ea;
+
+}
+
+
+/*
+   IMPORTANT:
+   The actual movement is handled
+   by JavaScript when the pointer
+   enters the button.
+*/
+
+
+/* ================================= */
+/* CORRECT BUTTON HOVER */
+/* ================================= */
+
+.correct-answer:hover {
+
+    transform:
+        translate(
+            -50%,
+            -50%
+        )
+        scale(1.05);
+
+}
+
+
+/* ================================= */
+/* ANSWER RESULT */
+/* ================================= */
+
+#answerResult {
+
+    min-height: 50px;
+
+    margin-top: 15px;
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    color: #c44569;
+
+}
+
+
+/* ================================= */
+/* FINAL SCREEN */
+/* ================================= */
+
+.final-screen {
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(
+                255,
+                255,
+                255,
+                0.85
+            ),
+            rgba(
+                255,
+                220,
+                232,
+                0.55
+            )
+        );
+
+}
+
+
+.confetti {
+
+    font-size: 50px;
+
+    animation:
+        floating
+        2s
+        infinite
+        ease-in-out;
+
+}
+
+
+.final-photo-frame {
+
+    width: 380px;
+
+    height: 430px;
+
+    background: white;
+
+    padding: 12px;
+
+    margin:
+        20px 0
+        30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(
+            0,
+            0,
+            0,
+            0.2
+        );
+
+}
+
+
+.final-photo-frame img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 6px;
+
+}
+
+
+.final-letter {
+
+    max-width: 650px;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+}
+
+
+.final-letter p {
+
+    margin: 10px 0;
+
+}
+
+
+.final-letter h2 {
+
+    margin-top: 25px;
+
+    color: #d94f70;
+
+}
+
+
+.forever {
+
+    margin-top: 30px;
+
+    color: #a13d59;
+
+    font-style: italic;
+
+}
+
+
+/* ================================= */
+/* FLOATING HEARTS */
+/* ================================= */
+
+.heart {
+
+    position: fixed;
+
+    bottom: -30px;
+
+    font-size: 22px;
+
+    pointer-events: none;
+
+    animation:
+        heartFloat
+        5s
+        linear
+        forwards;
+
+    z-index: 1000;
+
+}
+
+
+/* ================================= */
+/* HIDDEN */
+/* ================================= */
+
+.hidden {
+
+    display: none !important;
+
+}
+
+
+/* ================================= */
+/* ANIMATIONS */
+/* ================================= */
+
+@keyframes screenEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.95)
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+
+    }
+
+}
+
+
+@keyframes floating {
+
+    0% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-15px);
+
+    }
+
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+@keyframes shake {
+
+    0%,
+    100% {
+
+        transform:
+            rotate(0);
+
+    }
+
+    25% {
+
+        transform:
+            rotate(-3deg);
+
+    }
+
+    75% {
+
+        transform:
+            rotate(3deg);
+
+    }
+
+}
+
+
+@keyframes photoReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.6);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes giftOpen {
+
+    0% {
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.3)
+            rotate(10deg);
+
+    }
+
+    100% {
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes heartFloat {
+
+    from {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+
+    }
+
+    to {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* ================================= */
+/* MOBILE */
+/* ================================= */
+
+@media (max-width: 600px) {
+
+    h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    h2 {
+
+        font-size: 23px;
+
+    }
+
+
+    .description {
+
+        font-size: 16px;
+
+    }
+
+
+    /* ============================= */
+    /* GIFTS */
+    /* ============================= */
+
+    .gift-container {
+
+        gap: 12px;
+
+    }
+
+
+    .gift {
+
+        width: 90px;
+
+        height: 90px;
+
+        font-size: 42px;
+
+    }
+
+
+    /* ============================= */
+    /* GIFT PHOTO */
+    /* ============================= */
+
+    .gift-photo {
+
+        width: 250px;
+
+        height: 300px;
+
+    }
+
+
+    /* ============================= */
+    /* MEMORY PHOTO */
+    /* ============================= */
+
+    .photo-frame,
+    .final-photo-frame {
+
+        width: 300px;
+
+        height: 380px;
+
+    }
+
+
+    /* ============================= */
+    /* VIDEO */
+    /* ============================= */
+
+    .video-container {
+
+        width: 95%;
+
+    }
+
+
+    .video-container video {
+
+        max-height: 450px;
+
+        border-radius: 15px;
+
+    }
+
+
+    /* ============================= */
+    /* QUESTION */
+    /* ============================= */
+
+    .answer-container {
+
+        width: 95%;
+
+        min-height: 370px;
+
+        margin-top: 20px;
+
+    }
+
+
+    .answer-container button {
+
+        font-size: 14px;
+
+        padding:
+            13px
+            18px;
+
+    }
+
+
+    /* ============================= */
+    /* WRONG OPTION 1 */
+    /* ============================= */
+
+    .moving-answer:nth-child(1) {
+
+        left: 5px;
+
+        top: 25px;
+
+    }
+
+
+    /* ============================= */
+    /* WRONG OPTION 2 */
+    /* ============================= */
+
+    .moving-answer:nth-child(2) {
+
+        right: 5px;
+
+        top: 25px;
+
+    }
+
+
+    /* ============================= */
+    /* WRONG OPTION 3 */
+    /* ============================= */
+
+    .moving-answer:nth-child(3) {
+
+        left: 50%;
+
+        bottom: 25px;
+
+        transform:
+            translateX(-50%);
+
+    }
+
+
+    /* ============================= */
+    /* CORRECT OPTION */
+    /* ============================= */
+
+    .correct-answer {
+
+        left: 50%;
+
+        top: 50%;
+
+    }
+
+}

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For My Little Brother ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Floating Hearts -->
+    <div id="hearts"></div>
+
+
+    <!-- ================================= -->
+    <!-- SCREEN 1 : WELCOME -->
+    <!-- ================================= -->
+
+    <section id="screen1" class="screen active">
+
+        <div class="sparkles">
+            ✨
+        </div>
+
+        <div class="rakhi">
+            🪢
+        </div>
+
+        <p class="tiny-title">
+            A SECRET MESSAGE FOR YOU
+        </p>
+
+        <h1>
+            Hey Little Brother...
+        </h1>
+
+        <h2>
+            I made something for you ❤️
+        </h2>
+
+        <p class="description">
+
+            There are a few surprises hidden inside.
+
+            <br>
+
+            But you have to discover them yourself...
+
+        </p>
+
+        <button
+            class="main-button"
+            onclick="goToScreen(2)"
+        >
+            START THE SURPRISE 🎁
+        </button>
+
+    </section>
+
+
+
+    <!-- ================================= -->
+    <!-- SCREEN 2 : DON'T CLICK -->
+    <!-- ================================= -->
+
+    <section id="screen2" class="screen">
+
+        <div class="big-emoji">
+            😏
+        </div>
+
+        <p class="tiny-title">
+            WARNING
+        </p>
+
+        <h1>
+            Whatever you do...
+        </h1>
+
+        <h2>
+            DON'T CLICK THE BUTTON.
+        </h2>
+
+        <button
+            class="danger-button"
+            onclick="goToScreen(3)"
+        >
+            DON'T CLICK ME 🚫
+        </button>
+
+        <p class="hint">
+            Seriously. Don't. 👀
+        </p>
+
+    </section>
+
+
+
+    <!-- ================================= -->
+    <!-- SCREEN 3 : GOTCHA -->
+    <!-- ================================= -->
+
+    <section id="screen3" class="screen">
+
+        <div class="big-emoji">
+            😂
+        </div>
+
+        <h1>
+            I KNEW IT!
+        </h1>
+
+        <p class="description">
+
+            You literally had ONE job. 😂
+
+            <br><br>
+
+            But honestly...
+
+            <br>
+
+            I knew you would click it.
+
+        </p>
+
+        <button
+            class="main-button"
+            onclick="goToScreen(4)"
+        >
+            FINE... SHOW ME 👀
+        </button>
+
+    </section>
+
+
+
+    <!-- ================================= -->
+    <!-- SCREEN 4 : GIFTS -->
+    <!-- ================================= -->
+
+    <section id="screen4" class="screen">
+
+        <p class="tiny-title">
+            SURPRISE #1
+        </p>
+
+        <h1>
+            Pick One 🎁
+        </h1>
+
+        <p class="description">
+
+            Three boxes.
+
+            <br>
+
+            Three different surprises.
+
+            <br>
+
+            Choose wisely... 😏
+
+        </p>
+
+
+        <div class="gift-container">
+
+            <button
+                class="gift"
+                onclick="openGift(1)"
+            >
+                🎁
+            </button>
+
+
+            <button
+                class="gift"
+                onclick="openGift(2)"
+            >
+                🎁
+            </button>
+
+
+            <button
+                class="gift"
+                onclick="openGift(3)"
+            >
+                🎁
+            </button>
+
+        </div>
+
+
+        <div id="giftResult"></div>
+
+
+        <button
+            id="memoryButton"
+            class="next-button hidden"
+            onclick="goToScreen(5)"
+        >
+            I WANT ANOTHER SURPRISE 📸
+        </button>
+
+    </section>
+
+
+
+    <!-- ================================= -->
+    <!-- SCREEN 5 : PHOTO MEMORIES -->
+    <!-- ================================= -->
+
+    <section id="screen5" class="screen">
+
+        <p class="tiny-title">
+            SURPRISE #2
+        </p>
+
+        <h1>
+            MEMORY LOCKED 🔒
+        </h1>
+
+        <p class="description">
+
+            I found some old memories...
+
+            <br>
+
+            But they're locked.
+
+        </p>
+
+
+        <button
+            id="unlockButton"
+            class="main-button"
+            onclick="unlockMemory()"
+        >
+            UNLOCK MEMORY 🔓
+        </button>
+
+
+        <!-- MEMORY CARD -->
+
+        <div
+            id="memoryCard"
+            class="hidden"
+        >
+
+            <div class="photo-frame">
+
+                <img
+                    id="memoryPhoto"
+                    src="images/photo1.jpeg"
+                    alt="Our memory"
+                >
+
+            </div>
+
+
+            <h2 id="photoTitle">
+                Memory 1 🥹❤️
+            </h2>
+
+
+            <p id="photoCaption">
+                One of my favourite memories with you. ❤️
+            </p>
+
+
+            <p
+                id="photoCounter"
+                class="photo-counter"
+            >
+                1 / 13
+            </p>
+
+
+            <button
+                id="nextPhotoButton"
+                class="main-button"
+                onclick="nextPhoto()"
+            >
+                NEXT PHOTO 📸
+            </button>
+
+        </div>
+
+
+        <!-- VIDEO BUTTON -->
+
+        <button
+            id="videoNext"
+            class="next-button hidden"
+            onclick="goToScreen(6)"
+        >
+            WAIT... THERE'S A VIDEO 🎥
+        </button>
+
+    </section>
+
+
+
+    <!-- ================================= -->
+    <!-- SCREEN 6 : VIDEOS -->
+    <!-- ================================= -->
+
+    <section id="screen6" class="screen">
+
+        <p class="tiny-title">
+            SURPRISE #3
+        </p>
+
+        <h1>
+            I FOUND THIS... 🎥
+        </h1>
+
+        <p class="description">
+
+            You probably forgot about these.
+
+            <br>
+
+            So I saved them here. ❤️
+
+        </p>
+
+
+        <!-- WATCH VIDEO 1 -->
+
+        <button
+            id="watchButton"
+            class="main-button"
+            onclick="showVideo()"
+        >
+            WATCH OUR MEMORY 🎬
+        </button>
+
+
+        <!-- VIDEO 1 -->
+
+        <div
+            id="videoBox"
+            class="video-container hidden"
+        >
+
+            <h2>
+                Memory Video 1 ❤️
+            </h2>
+
+            <video
+                id="video1"
+                controls
+                playsinline
+                preload="metadata"
+            >
+
+                <source
+                    src="videos/memories1.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support this video.
+
+            </video>
+
+
+            <p class="video-message">
+                A little memory from the past... 🥹❤️
+            </p>
+
+        </div>
+
+
+        <!-- NEXT VIDEO -->
+
+        <button
+            id="nextVideoButton"
+            class="next-button hidden"
+            onclick="showSecondVideo()"
+        >
+            THERE'S ANOTHER VIDEO 👀🎥
+        </button>
+
+
+        <!-- VIDEO 2 -->
+
+        <div
+            id="videoBox2"
+            class="video-container hidden"
+        >
+
+            <h2>
+                Memory Video 2 🥹❤️
+            </h2>
+
+            <video
+                id="video2"
+                controls
+                playsinline
+                preload="metadata"
+            >
+
+                <source
+                    src="videos/memories2.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support this video.
+
+            </video>
+
+
+            <p class="video-message">
+                Okay... this one is special. ❤️
+            </p>
+
+        </div>
+
+
+        <!-- QUESTION BUTTON -->
+
+        <button
+            id="questionNext"
+            class="next-button hidden"
+            onclick="goToScreen(7)"
+        >
+            OKAY... ONE LAST THING 👀
+        </button>
+
+    </section>
+
+
+
+    <!-- ================================= -->
+    <!-- SCREEN 7 : QUESTION -->
+    <!-- ================================= -->
+
+    <section id="screen7" class="screen">
+
+        <div class="big-emoji">
+            🤔
+        </div>
+
+        <p class="tiny-title">
+            VERY IMPORTANT
+        </p>
+
+        <h1>
+            One Question
+        </h1>
+
+        <p class="description">
+
+            Who is the best sister in the world? 😌
+
+            <br>
+
+            Think VERY carefully...
+
+        </p>
+
+
+        <div class="answer-container">
+
+
+            <!-- WRONG OPTION 1 -->
+
+            <button
+                class="moving-answer"
+            >
+                Someone else ❤️
+            </button>
+
+
+            <!-- WRONG OPTION 2 -->
+
+            <button
+                class="moving-answer"
+            >
+                I won't tell 😂
+            </button>
+
+
+            <!-- WRONG OPTION 3 -->
+
+            <button
+                class="moving-answer"
+            >
+                Obviously not Didi 😎
+            </button>
+
+
+            <!-- CORRECT ANSWER -->
+
+            <button
+                class="correct-answer"
+                onclick="answerQuestion()"
+            >
+                You, Didi 🥹❤️
+            </button>
+
+        </div>
+
+
+        <div id="answerResult"></div>
+
+
+        <button
+            id="finalNext"
+            class="next-button hidden"
+            onclick="goToScreen(8)"
+        >
+            FINAL SURPRISE 🪢
+        </button>
+
+    </section>
+
+
+
+    <!-- ================================= -->
+    <!-- SCREEN 8 : FINAL -->
+    <!-- ================================= -->
+
+    <section
+        id="screen8"
+        class="screen final-screen"
+    >
+
+        <div class="confetti">
+            🎉
+        </div>
+
+
+        <div class="final-rakhi">
+            🪢
+        </div>
+
+
+        <p class="tiny-title">
+            HAPPY
+        </p>
+
+
+        <h1>
+            RAKSHA BANDHAN
+        </h1>
+
+
+        <h2>
+            My Little Brother ❤️
+        </h2>
+
+
+        <div class="final-photo-frame">
+
+            <img
+                src="images/photo2.jpeg"
+                alt="Me and my brother"
+            >
+
+        </div>
+
+
+        <div class="final-letter">
+
+            <p>
+                No matter how much we fight...
+            </p>
+
+
+            <p>
+                No matter how much we annoy each other...
+            </p>
+
+
+            <p>
+                And no matter how much you irritate me... 😂
+            </p>
+
+
+            <p>
+                You'll always be my little brother. ❤️
+            </p>
+
+
+            <p>
+                I may not say it every day,
+                but I'm really lucky to have you.
+            </p>
+
+
+            <h2>
+                Love you, idiot! 🥹❤️
+            </h2>
+
+        </div>
+
+
+        <p class="forever">
+            Forever annoying each other. 😂🫶
+        </p>
+
+    </section>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
